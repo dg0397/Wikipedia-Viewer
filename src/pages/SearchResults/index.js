@@ -1,6 +1,7 @@
 import React from 'react';
 import useArticles from 'hooks/useArticles';
-import ArticleList from 'components/ArticleList';
+import ArticleList from 'components/ArticleList/ArticleList';
+import Spinner from 'components/ContentLoader/ContentLoader';
 
 export default function SearchResults({params}){
     const {keyword} = params;
@@ -8,6 +9,13 @@ export default function SearchResults({params}){
     const {articles,loading} = useArticles({keyword});
     console.log(articles)
     return(
-        <ArticleList  articles={articles} />
+        <>
+            {
+                loading ? 
+                <Spinner /> :
+                <ArticleList  articles={articles} />
+            }
+        </>
+        
     )
 }

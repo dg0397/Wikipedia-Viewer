@@ -1,5 +1,6 @@
 import React,{useState} from 'react';
 import { useLocation } from 'wouter';
+import './SearchBar.css'
 
 export default function SearchBar(){
     const [keyword,setKeyword] = useState("");
