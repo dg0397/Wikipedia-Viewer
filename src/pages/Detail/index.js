@@ -1,6 +1,12 @@
-import React from 'react';
-import SingleDetail from 'components/SingleDetail/SingleDetail'
-import useGlobalArticles from 'hooks/useGlobalArticles'
+import React, { Suspense } from 'react';
+import useGlobalArticles from 'hooks/useGlobalArticles';
+
+
+import SpinnerArticleFull from 'components/ContentLoader/ArticleFullLoader';
+
+const SingleDetail = React.lazy(
+    () => import("components/SingleDetail/SingleDetail")
+)
 
 export default function Detail({params}){
     const {articles} = useGlobalArticles()
@@ -10,6 +16,8 @@ export default function Detail({params}){
     console.log(articles)
     console.log(article)
     return(
-        <SingleDetail article = {article} id = {id}/>
+        <Suspense fallback = {<SpinnerArticleFull/>} >
+            <SingleDetail article = {article} id = {id}/>
+        </Suspense>
     )
 }

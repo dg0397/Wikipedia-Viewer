@@ -1,6 +1,7 @@
+import {BASE,API_URL_ARTICLES} from 'services/settings';
 export default function getArticles(setState,setStatus,{keyword}){
     setStatus(true)
-    fetch(`https://en.wikipedia.org/w/api.php?action=query&format=json&smaxage=0&maxage=0&origin=*&prop=extracts%7Cpageimages&list=&generator=search&exsentences=1&exlimit=max&exintro=1&explaintext=1&piprop=thumbnail%7Cname%7Coriginal&pithumbsize=250&pilimit=max&pilicense=free&gsrnamespace=&gsrlimit=10&gsroffset=0&gsrsort=relevance&gsrsearch=${keyword}`)
+    fetch(`${BASE}${API_URL_ARTICLES}&gsroffset=0&gsrsearch=${keyword}`)
         .then(data => data.json())
         .then(jsonResponse =>{
             const {pages} = jsonResponse.query;

@@ -1,7 +1,10 @@
 import React from 'react';
 import useArticles from 'hooks/useArticles';
+
 import ArticleList from 'components/ArticleList/ArticleList';
-import Spinner from 'components/ContentLoader/ContentLoader';
+import SearchBar from 'components/SearchBar/SearchBar';
+
+import SpinnerArticles from 'components/ContentLoader/ArticleLoader';
 
 export default function SearchResults({params}){
     const {keyword} = params;
@@ -12,8 +15,11 @@ export default function SearchResults({params}){
         <>
             {
                 loading ? 
-                <Spinner /> :
-                <ArticleList  articles={articles} />
+                <SpinnerArticles /> :
+                <>
+                    <SearchBar />
+                    <ArticleList  articles={articles} />
+                </>
             }
         </>
         
