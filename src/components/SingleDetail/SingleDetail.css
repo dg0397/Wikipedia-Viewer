@@ -1,0 +1,76 @@
+.SingleDetail{
+    display: grid;
+    grid-template-areas: 
+    "title title"
+    "img img"
+    "description description"
+    "backBtn fullBtn";
+    grid-row-gap: 15px;
+    grid-column-gap: 5px;
+    max-width: 600px;
+    margin-top:1.5rem;
+    padding: 1rem .5rem;
+    background-color:white;
+    color:#1c1c1c;
+    border-radius: 20px;
+    box-shadow: 0px 0px 5px #1c1c1c;
+}
+.SingleDetail h1{
+    grid-area: title;
+    font-weight: 300;
+    font-style: italic;
+}
+.SingleDetail .container_img{
+    grid-area: img;
+    justify-self: center;
+    width: 50%;
+}
+.SingleDetail .container_img img{
+    width: 100%;
+    border-radius: 30px;
+}
+.SingleDetail p{
+    grid-area: description;
+    text-align: justify;
+    line-height: 1.5rem;
+}
+.SingleDetail p::first-letter{
+    font-size: 1.5rem;
+    margin-left: 1rem;
+}
+#original{
+    grid-area: fullBtn;
+    padding: .4rem;
+    text-align: center;
+    font-weight: 300;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: white;
+    background-color: hsl(154, 59%, 51%) ;
+    border-radius: 5px;
+    border:none;
+    box-shadow: 0 5px rgba(0, 0, 0, 0.2);
+    transition: all 0.25s ease-in ;
+}
+
+#orginal:hover {
+    background-color:hsl(154, 59%, 56%);
+}
+#original:active{
+    background-color: hsl(154, 59%, 41%);
+}
+
+#go_back{
+    grid-area: backBtn;
+    text-align: center;
+    padding: .4rem;
+    text-decoration: none;
+    font-weight: 300;
+    text-transform: uppercase;
+    color: white;
+    background-color: hsl(197, 55%, 58%) ;
+    border-radius: 5px;
+    border:none;
+    box-shadow: 0 5px rgba(0, 0, 0, 0.2);
+    transition: all 0.25s ease-in 
+}
