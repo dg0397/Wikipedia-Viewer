@@ -1,23 +1,23 @@
 import React, { Suspense } from 'react';
-import useGlobalArticles from 'hooks/useGlobalArticles';
+//import useGlobalArticles from 'hooks/useGlobalArticles';
 
 
 import SpinnerArticleFull from 'components/ContentLoader/ArticleFullLoader';
+
+import useSingleArticle from 'hooks/useSingleArticle';
 
 const SingleDetail = React.lazy(
     () => import("components/SingleDetail/SingleDetail")
 )
 
 export default function Detail({params}){
-    const {articles} = useGlobalArticles()
+    const {singleArticle,loadingArticle} = useSingleArticle(params)
     const {id} = params;
 
-    const article = articles.find(singleArticle => singleArticle.pageid === Number(id));
-    console.log(articles)
-    console.log(article)
+    console.log(singleArticle)
     return(
         <Suspense fallback = {<SpinnerArticleFull/>} >
-            <SingleDetail article = {article} id = {id}/>
+            {loadingArticle ? <SpinnerArticleFull/> : <SingleDetail article = {singleArticle} id = {id}/> }
         </Suspense>
     )
 }

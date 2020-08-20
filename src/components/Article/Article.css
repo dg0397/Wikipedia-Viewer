@@ -1,0 +1,36 @@
+.Article{
+    display: flex;
+    flex-direction: column;
+    justify-items: flex-start;
+    padding: 1rem .5rem;
+    background-color: rgba(255, 255, 255, 0.9);
+    color:#1c1c1c;
+    border-radius: 20px;
+}
+.Article h1{
+    text-align: left;
+    font-weight: 300;
+    font-size: 1.5rem;
+    text-decoration: underline ;
+    line-height: 3rem;
+    letter-spacing: 1px;
+}
+.Article p{
+    text-align: justify;
+}
+.Article a{
+    margin-top:1rem;
+    text-align: left;
+    width: auto;
+    padding: .4rem;
+    font-size: 1rem;
+    text-decoration: none;
+    font-weight: 300;
+    text-transform: uppercase;
+    color: white;
+    background-color: hsl(197, 55%, 58%) ;
+    border-radius: 5px;
+    border:none;
+    box-shadow: 0 5px rgba(0, 0, 0, 0.2);
+    transition: all 0.25s ease-in 
+}

@@ -18,9 +18,11 @@ function App() {
       <div className="App-content">
         <Header/>
         <ArticlesContextProvider>
-          <Route path = "/" component ={Home} />
-          <Route path = "/search/:keyword" component ={SearchResults} />
-          <Route path = "/article/:id" component ={Detail} />
+          <div className = 'Main'>
+            <Route path = "/" component ={Home} />
+            <Route path = "/search/:keyword" component ={SearchResults} />
+            <Route path = "/article/:id" component ={Detail} />
+          </div>
         </ArticlesContextProvider>
         <Footer />
       </div>

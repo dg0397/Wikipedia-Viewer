@@ -15,9 +15,14 @@ export default function SearchBar(){
         setKeyword(value)
     }
     return(
-        <form onSubmit = {handleSubmit}>
-            <input type="text" value = {keyword} placeholder = "Enter something..." onChange = {handleInput} />
-            <button>Search</button>
-        </form>
+        <div className = "App-form" >
+            <form onSubmit = {handleSubmit}>
+                <input type="text" value = {keyword} placeholder = "Enter something..." onChange = {handleInput} />
+                <button>Search</button>
+            </form>
+            <div className = "Random-page" >
+                <a href="https://en.wikipedia.org/wiki/Special:Random" target = "_blank" rel="noopener noreferrer" >Get a Ramdom Article</a>
+            </div>
+        </div>
     )
 }

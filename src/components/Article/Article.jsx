@@ -4,11 +4,10 @@ import { Link } from 'wouter';
 
 export default function Article({title,extract,pageid}){
     return(
-        <Link to = {`/article/${pageid}`}>
-            <div className = "Article" >
-                <h1>{title}</h1>
-                <p>{extract}</p>
-            </div>
-        </Link>
+        <div className = "Article" >
+            <h1>{title}</h1>
+            <p>{extract}</p>
+            <Link to = {`/article/${pageid}`}>See the Article</Link>
+        </div>
     )
 }
