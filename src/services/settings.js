@@ -1,3 +1,3 @@
 export const BASE = "https://en.wikipedia.org";
-export const API_URL_ARTICLES = "/w/api.php?action=query&format=json&smaxage=0&maxage=0&origin=*&prop=extracts%7Cpageimages&list=&generator=search&exsentences=1&exlimit=max&exintro=1&explaintext=1&piprop=thumbnail%7Cname%7Coriginal&pithumbsize=250&pilimit=max&pilicense=free&gsrnamespace=&gsrlimit=10&gsrsort=relevance"
+export const API_URL_ARTICLES = "/w/api.php?action=query&format=json&smaxage=0&maxage=0&origin=*&prop=extracts%7Cpageimages&list=&generator=search&exsentences=1&exlimit=max&exintro=1&explaintext=1&piprop=thumbnail%7Cname%7Coriginal&pithumbsize=250&pilimit=max&pilicense=free&gsrnamespace=&gsrsort=relevance"
 export const API_URL_SINGLE_ARTICLE = "/w/api.php?action=query&format=json&origin=*&prop=extracts%7Cpageimages&indexpageids=1&exsentences=5&explaintext=1&piprop=thumbnail%7Cname&pithumbsize=500&pilicense=free"

@@ -9,8 +9,13 @@ import SpinnerArticles from 'components/ContentLoader/ArticleLoader';
 export default function SearchResults({params}){
     const {keyword} = params;
     console.log(keyword)
-    const {articles,loading} = useArticles({keyword});
+    const {articles,loading,loadingNextPage,setPages} = useArticles({keyword});
     console.log(articles)
+
+    const handleNextPage = () => {
+        setPages(prevState => prevState + 1)
+    }
+    console.log(loadingNextPage)
     return(
         <>
             {
@@ -19,6 +24,8 @@ export default function SearchResults({params}){
                 <>
                     <SearchBar />
                     <ArticleList  articles={articles} />
+                    <button onClick = {handleNextPage} >Get next page</button>
+                    {loadingNextPage &&   <SpinnerArticles /> } 
                 </>
             }
         </>

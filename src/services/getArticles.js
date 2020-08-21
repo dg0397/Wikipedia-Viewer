@@ -1,7 +1,8 @@
 import {BASE,API_URL_ARTICLES} from 'services/settings';
-export default function getArticles(setState,setStatus,{keyword}){
+
+export default function getArticles(setState,setStatus,{keyword, page = 0, limit = 10}){
     setStatus(true)
-    fetch(`${BASE}${API_URL_ARTICLES}&gsroffset=0&gsrsearch=${keyword}`)
+    fetch(`${BASE}${API_URL_ARTICLES}&gsrlimit=${limit}&gsroffset=${page*limit}&gsrsearch=${keyword}`)
         .then(data => data.json())
         .then(jsonResponse =>{
             const {pages} = jsonResponse.query;
@@ -13,7 +14,13 @@ export default function getArticles(setState,setStatus,{keyword}){
                 return {pageid,pageimage,title,originalSource,thumbnailSource,extract}
             } );
             console.log("Fetching");
-            setState(articles)
+            
+            if(page === 0 ){
+                setState(articles)
+              }else{
+                setState(prevState => prevState.concat(articles))
+              }
+
             setStatus(false)
         })
 }
