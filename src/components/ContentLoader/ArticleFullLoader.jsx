@@ -4,11 +4,11 @@ import ContentLoader from "react-content-loader"
 const ArticleFull = (props) => (
   <ContentLoader 
     speed={2}
-    width={500}
+    width={450}
     height={220}
-    viewBox="0 0 500 220"
-    backgroundColor="#7f1a1a"
-    foregroundColor="#ecebeb"
+    viewBox="0 0 450 220"
+    backgroundColor="#ffffff28"
+    foregroundColor="#c1c1c1"
     {...props}
   >
     <rect x="15" y="13" rx="5" ry="5" width="180" height="10" /> 

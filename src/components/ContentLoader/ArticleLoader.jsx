@@ -4,11 +4,11 @@ import ContentLoader from "react-content-loader"
 const Article = (props) => (
   <ContentLoader
     speed={2}
-    width={500}
-    height={200}
-    viewBox="0 0 500 200"
-    backgroundColor="#7f1a1a"
-    foregroundColor="#ecebeb"
+    width={448}
+    height={120}
+    viewBox="0 0 448 120"
+    backgroundColor="#ffffff28"
+    foregroundColor="#c1c1c1"
     {...props}
   >
     <rect x="15" y="13" rx="3" ry="3" width="150" height="8" />
@@ -30,7 +30,7 @@ Article.metadata = {
 }
 
 export default function SpinnerArticles() {
-  const list = [0,1,2];
+  const list = [0,1,2,3,4];
   const spinners = list.map(num => {
     return (
       <Article key = {num} />
