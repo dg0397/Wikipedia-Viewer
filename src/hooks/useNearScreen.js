@@ -12,7 +12,8 @@ export default function useNearScreen ({distance = "100px", externalRef} = {} ){
             const el = entries[0];
             if(el.isIntersecting){
                 setShow(true);
-                observer.disconnect()
+            }else{
+                setShow(false)
             }
         }
         Promise.resolve(

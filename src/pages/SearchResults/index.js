@@ -10,18 +10,20 @@ import useNearScreen from 'hooks/useNearScreen';
 export default function SearchResults({params}){
     const {keyword} = params;
     //console.log(keyword)
-    const {articles,loading,loadingNextPage,setPages} = useArticles({keyword});
+    const {articles,loading,loadingNextPage,setPages,page} = useArticles({keyword});
     //console.log(articles)
     const externalRef = useRef();
     const {isNearScreen} = useNearScreen({externalRef : loading ? null : externalRef})
 
-    const handleNextPage = () => setPages(preState => preState +1);
+     
 
     useEffect(()=> {
-       if(isNearScreen) handleNextPage()
-   },[isNearScreen]);
-   
-    console.log(loadingNextPage)
+       if(isNearScreen) setPages(preState => preState +1);
+   },[isNearScreen,setPages]);
+
+    console.log(loadingNextPage);
+    console.log(isNearScreen);
+    console.log(page)
     return(
         <>
             {

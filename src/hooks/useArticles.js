@@ -24,5 +24,5 @@ export default function useArticles({keyword}){
         getArticles(setArticles,setLoadingNextPage,{keyword : keywordToUse, page})
     },[page,keywordToUse,setArticles])
     
-    return {articles,loading,loadingNextPage,setPages}
+    return {articles,loading,loadingNextPage,setPages,page}
 }
