@@ -1,20 +1,26 @@
-import React from 'react';
+import React, { useRef, useEffect } from 'react';
 import useArticles from 'hooks/useArticles';
 
 import ArticleList from 'components/ArticleList/ArticleList';
 import SearchBar from 'components/SearchBar/SearchBar';
 
 import SpinnerArticles from 'components/ContentLoader/ArticleLoader';
+import useNearScreen from 'hooks/useNearScreen';
 
 export default function SearchResults({params}){
     const {keyword} = params;
-    console.log(keyword)
+    //console.log(keyword)
     const {articles,loading,loadingNextPage,setPages} = useArticles({keyword});
-    console.log(articles)
+    //console.log(articles)
+    const externalRef = useRef();
+    const {isNearScreen} = useNearScreen({externalRef : loading ? null : externalRef})
 
-    const handleNextPage = () => {
-        setPages(prevState => prevState + 1)
-    }
+    const handleNextPage = () => setPages(preState => preState +1);
+
+    useEffect(()=> {
+       if(isNearScreen) handleNextPage()
+   },[isNearScreen]);
+   
     console.log(loadingNextPage)
     return(
         <>
@@ -24,7 +30,7 @@ export default function SearchResults({params}){
                 <>
                     <SearchBar />
                     <ArticleList  articles={articles} />
-                    <button onClick = {handleNextPage} >Get next page</button>
+                    <div className = "viewfinder" ref = {externalRef}></div>
                     {loadingNextPage &&   <SpinnerArticles /> } 
                 </>
             }
