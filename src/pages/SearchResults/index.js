@@ -10,7 +10,7 @@ import useNearScreen from 'hooks/useNearScreen';
 export default function SearchResults({params}){
     const {keyword} = params;
     //console.log(keyword)
-    const {articles,loading,loadingNextPage,setPages,page} = useArticles({keyword});
+    const {articles,loading,loadingNextPage,setPages} = useArticles({keyword});
     //console.log(articles)
     const externalRef = useRef();
     const {isNearScreen} = useNearScreen({externalRef : loading ? null : externalRef})
@@ -18,12 +18,13 @@ export default function SearchResults({params}){
      
 
     useEffect(()=> {
+        console.log(isNearScreen);
        if(isNearScreen) setPages(preState => preState +1);
    },[isNearScreen,setPages]);
 
-    console.log(loadingNextPage);
-    console.log(isNearScreen);
-    console.log(page)
+    //console.log(loadingNextPage);
+    //
+    //console.log(page)
     return(
         <>
             {
@@ -31,8 +32,9 @@ export default function SearchResults({params}){
                 <SpinnerArticles /> :
                 <>
                     <SearchBar />
+                    <h2>Search Results for: {decodeURI(keyword)}...</h2>
                     <ArticleList  articles={articles} />
-                    <div className = "viewfinder" ref = {externalRef}></div>
+                    <div ref = {externalRef}></div>
                     {loadingNextPage &&   <SpinnerArticles /> } 
                 </>
             }

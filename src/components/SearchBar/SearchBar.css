@@ -2,19 +2,18 @@
     width: 30%;
     min-width: 270px;
     margin : 3rem auto;
-    background-color: rgba(255, 255, 255, 0.9);
+    background-color: rgba(255, 255, 255, 0.8);
     padding: 1rem;
     border-radius: 10px;
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.4);
 }
 .App-form form{
     display: flex;
-    justify-content: space-around;
+    justify-content:  center;
     width: 100%;
     margin-bottom: 1rem ;
 }
 .App-form input{
-    width: 60%;
     height: 2rem;
     padding: .4rem;
     text-align: start;
@@ -23,8 +22,8 @@
     -webkit-rtl-ordering: logical;
     cursor: text;
     color:#1c1c1c;
-    border: 1px solid rgb(146, 204, 255);
-    border-radius: 5px;
+    border:none;
+    border-radius: 5px 0 0 5px;
     box-sizing: border-box;
     box-shadow: 0 5px rgba(0, 0, 0, 0.2);
 }
@@ -32,20 +31,20 @@
     outline:none
 }
 .App-form button{
-    width: 30%;
     padding: .4rem;
     text-align: center;
     font-weight: 300;
     text-transform: uppercase;
     color: white;
     background-color: hsl(154, 59%, 51%) ;
-    border-radius: 5px;
+    border-radius: 0 5px 5px 0;
     border:none;
     box-shadow: 0 5px rgba(0, 0, 0, 0.2);
     transition: all 0.25s ease-in 
 }
 .App-form button:hover {
     background:hsl(154, 59%, 56%);
+    cursor: pointer;
 }
 .App-form button:active{
     background: hsl(154, 59%, 41%);

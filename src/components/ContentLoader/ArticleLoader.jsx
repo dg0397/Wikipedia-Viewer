@@ -4,7 +4,7 @@ import ContentLoader from "react-content-loader"
 const Article = (props) => (
   <ContentLoader
     speed={2}
-    width={448}
+    width={"70%"}
     height={120}
     viewBox="0 0 448 120"
     backgroundColor="#ffffff28"
@@ -38,8 +38,8 @@ export default function SpinnerArticles() {
   });
 
   return(
-    <>
+    <div style = {{margin: "4rem 0"}}>
       {spinners}
-    </>
+    </div>
   )
 }

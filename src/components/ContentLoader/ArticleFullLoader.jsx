@@ -34,4 +34,11 @@ ArticleFull.metadata = {
     filename: 'ArticleFull'
   }
   
-export default ArticleFull;
+
+export default function SpinnerFullArticle(){
+  return(
+    <div style = {{margin : "4rem auto"}} >
+      <ArticleFull />
+    </div>
+  )
+}
