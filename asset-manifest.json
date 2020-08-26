@@ -1,0 +1,32 @@
+{
+  "files": {
+    "main.css": "/Wikipedia-Viewer/static/css/main.fc28cfbd.chunk.css",
+    "main.js": "/Wikipedia-Viewer/static/js/main.8a2d8b8b.chunk.js",
+    "main.js.map": "/Wikipedia-Viewer/static/js/main.8a2d8b8b.chunk.js.map",
+    "runtime-main.js": "/Wikipedia-Viewer/static/js/runtime-main.04d6fee2.js",
+    "runtime-main.js.map": "/Wikipedia-Viewer/static/js/runtime-main.04d6fee2.js.map",
+    "static/js/2.28f4011a.chunk.js": "/Wikipedia-Viewer/static/js/2.28f4011a.chunk.js",
+    "static/js/2.28f4011a.chunk.js.map": "/Wikipedia-Viewer/static/js/2.28f4011a.chunk.js.map",
+    "static/css/3.7669fde5.chunk.css": "/Wikipedia-Viewer/static/css/3.7669fde5.chunk.css",
+    "static/js/3.9f7c95a6.chunk.js": "/Wikipedia-Viewer/static/js/3.9f7c95a6.chunk.js",
+    "static/js/3.9f7c95a6.chunk.js.map": "/Wikipedia-Viewer/static/js/3.9f7c95a6.chunk.js.map",
+    "static/css/4.42c2a667.chunk.css": "/Wikipedia-Viewer/static/css/4.42c2a667.chunk.css",
+    "static/js/4.f71d8e87.chunk.js": "/Wikipedia-Viewer/static/js/4.f71d8e87.chunk.js",
+    "static/js/4.f71d8e87.chunk.js.map": "/Wikipedia-Viewer/static/js/4.f71d8e87.chunk.js.map",
+    "static/js/5.8ba0a80c.chunk.js": "/Wikipedia-Viewer/static/js/5.8ba0a80c.chunk.js",
+    "static/js/5.8ba0a80c.chunk.js.map": "/Wikipedia-Viewer/static/js/5.8ba0a80c.chunk.js.map",
+    "index.html": "/Wikipedia-Viewer/index.html",
+    "precache-manifest.b48fb0f71a18f8d8e8c35ddb148dc941.js": "/Wikipedia-Viewer/precache-manifest.b48fb0f71a18f8d8e8c35ddb148dc941.js",
+    "service-worker.js": "/Wikipedia-Viewer/service-worker.js",
+    "static/css/3.7669fde5.chunk.css.map": "/Wikipedia-Viewer/static/css/3.7669fde5.chunk.css.map",
+    "static/css/4.42c2a667.chunk.css.map": "/Wikipedia-Viewer/static/css/4.42c2a667.chunk.css.map",
+    "static/css/main.fc28cfbd.chunk.css.map": "/Wikipedia-Viewer/static/css/main.fc28cfbd.chunk.css.map",
+    "static/js/2.28f4011a.chunk.js.LICENSE.txt": "/Wikipedia-Viewer/static/js/2.28f4011a.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.04d6fee2.js",
+    "static/js/2.28f4011a.chunk.js",
+    "static/css/main.fc28cfbd.chunk.css",
+    "static/js/main.8a2d8b8b.chunk.js"
+  ]
+}
