@@ -6,9 +6,13 @@ export default function ArticleList({articles}){
     return(
         <div className = "ArticleList" >
             {
-                articles.map( article => {
+                articles.map( ({title,extract,pageid}) => {
                     return(
-                        <Article {...article} key = {article.pageid} />
+                        <Article 
+                        title = {title}
+                        extract = {extract}
+                        pageid = {pageid}
+                        key = {pageid} />
                     )
                 })
             }

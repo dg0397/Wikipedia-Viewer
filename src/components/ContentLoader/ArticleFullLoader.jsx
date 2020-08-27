@@ -4,7 +4,7 @@ import ContentLoader from "react-content-loader"
 const ArticleFull = (props) => (
   <ContentLoader 
     speed={2}
-    width={450}
+    width={"100%"}
     height={220}
     viewBox="0 0 450 220"
     backgroundColor="#ffffff28"
@@ -37,7 +37,7 @@ ArticleFull.metadata = {
 
 export default function SpinnerFullArticle(){
   return(
-    <div style = {{margin : "4rem auto"}} >
+    <div style = {{margin : "4rem 0"}} >
       <ArticleFull />
     </div>
   )

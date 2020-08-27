@@ -2,7 +2,7 @@ import React from 'react';
 import './Article.css';
 import { Link } from 'wouter';
 
-export default function Article({title,extract,pageid}){
+function Article({title,extract,pageid}){
     return(
         <div className = "Article" >
             <h1>{title}</h1>
@@ -11,3 +11,5 @@ export default function Article({title,extract,pageid}){
         </div>
     )
 }
+
+export default React.memo(Article)
