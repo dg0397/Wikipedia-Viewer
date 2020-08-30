@@ -39,7 +39,7 @@ export default function Detail({params}){
         <>
             <Helmet>
                 <title>
-                     | Wikipedia Viewer
+                    {title} | Wikipedia Viewer
                 </title>
             </Helmet>
             <SingleDetail article = {singleArticle} id = {id}/> 
