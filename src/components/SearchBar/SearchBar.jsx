@@ -2,7 +2,7 @@ import React,{useState} from 'react';
 import { useLocation } from 'wouter';
 import './SearchBar.css'
 
-export default function SearchBar(){
+function SearchBar(){
     const [keyword,setKeyword] = useState("");
     const [,setPath] = useLocation();
 
@@ -26,3 +26,5 @@ export default function SearchBar(){
         </div>
     )
 }
+
+export default React.memo(SearchBar)
