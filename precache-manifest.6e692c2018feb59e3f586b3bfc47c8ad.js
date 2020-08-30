@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "050344eb13676e939dde150557e6dc52",
+    "revision": "fd9f8700c3d2f2eb06aa3d6e7c3ad2c4",
     "url": "/Wikipedia-Viewer/index.html"
   },
   {
@@ -12,8 +12,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/Wikipedia-Viewer/static/css/4.42c2a667.chunk.css"
   },
   {
-    "revision": "b828c291e8d5fa5cc05f",
-    "url": "/Wikipedia-Viewer/static/css/main.fc28cfbd.chunk.css"
+    "revision": "01115abbb1f4de0c9679",
+    "url": "/Wikipedia-Viewer/static/css/main.605aabff.chunk.css"
   },
   {
     "revision": "9fd92f1eff415ba0b3dc",
@@ -36,7 +36,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/Wikipedia-Viewer/static/js/5.8ba0a80c.chunk.js"
   },
   {
-    "revision": "b828c291e8d5fa5cc05f",
+    "revision": "01115abbb1f4de0c9679",
     "url": "/Wikipedia-Viewer/static/js/main.11f66d8d.chunk.js"
   },
   {
