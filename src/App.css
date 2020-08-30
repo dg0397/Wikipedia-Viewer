@@ -32,6 +32,7 @@
 }
 
 .Main h2{
+    align-self: flex-start;
     text-align: left;
     margin: 1rem 0;
     font-weight: 300;
