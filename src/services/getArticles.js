@@ -13,7 +13,6 @@ export default function getArticles(setState,setStatus,{keyword, page = 0, limit
                 return {pageid,title,thumbnailSource,extract}
             });
             console.log("Fetching");
-            
             if(page === 0 ){
                 setState(articles)
               }else{
