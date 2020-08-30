@@ -1,23 +1,48 @@
-import React, { Suspense } from 'react';
-//import useGlobalArticles from 'hooks/useGlobalArticles';
+import React from 'react';
 
 
-import SpinnerArticleFull from 'components/ContentLoader/ArticleFullLoader';
+import  SpinnerFullArticle from 'components/ContentLoader/ArticleFullLoader';
 
 import useSingleArticle from 'hooks/useSingleArticle';
 
-const SingleDetail = React.lazy(
-    () => import("components/SingleDetail/SingleDetail")
-)
+
+import SingleDetail from 'components/SingleDetail/SingleDetail'
+import { Redirect } from 'wouter';
+import { Helmet } from 'react-helmet';
 
 export default function Detail({params}){
-    const {singleArticle,loadingArticle} = useSingleArticle(params)
+    const {singleArticle,loadingArticle,isError} = useSingleArticle(params)
     const {id} = params;
 
-    console.log(singleArticle)
+
+    const title = singleArticle ? singleArticle.title : '';
+    console.log(isError)
+
+    if(loadingArticle){
+        return(
+            <>
+                <Helmet>
+                    <title>
+                        Loading...
+                    </title>
+                </Helmet>
+                <SpinnerFullArticle/> 
+            </>
+        )
+    }
+
+    if(isError) return <Redirect to = '/404'/>
+    
+    if(!singleArticle) return null;
+
     return(
-        <Suspense fallback = {<SpinnerArticleFull/>} >
-            {loadingArticle ? <SpinnerArticleFull/> : <SingleDetail article = {singleArticle} id = {id}/> }
-        </Suspense>
+        <>
+            <Helmet>
+                <title>
+                    {title} | Wikipedia Viewer
+                </title>
+            </Helmet>
+            <SingleDetail article = {singleArticle} id = {id}/> 
+        </>       
     )
 }

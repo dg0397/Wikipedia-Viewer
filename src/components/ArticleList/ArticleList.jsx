@@ -7,10 +7,11 @@ export default function ArticleList({articles}){
         <div className = "ArticleList" >
             {
                 articles.map( ({title,extract,pageid}) => {
+                    const newExtract = extract.slice(0,extract.indexOf('.')+1)
                     return(
                         <Article 
                         title = {title}
-                        extract = {extract}
+                        extract = {newExtract}
                         pageid = {pageid}
                         key = {pageid} />
                     )

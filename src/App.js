@@ -10,6 +10,7 @@ import Detail from "pages/Detail"
 import { Route } from 'wouter';
 import { ArticlesContextProvider } from 'context/ContextArticles';
 import SpinnerArticles from 'components/ContentLoader/ArticleLoader';
+import Page404 from 'components/Page404/Page404';
 
 const SearchResults = React.lazy(
   () => import("pages/SearchResults")
@@ -27,6 +28,10 @@ function App() {
               <Route path="/search/:keyword" component={SearchResults} />
             </Suspense>
             <Route path="/article/:id" component={Detail} />
+            <Route
+              path = '/404'
+              component = {Page404} 
+            />
           </div>
         </ArticlesContextProvider>
         <Footer />
