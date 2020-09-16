@@ -1,3 +1,4 @@
+import ButtonComponent from 'components/Button';
 import React,{useState} from 'react';
 import { useLocation } from 'wouter';
 import './SearchBar.css'
@@ -18,7 +19,7 @@ function SearchBar(){
         <div className = "App-form" >
             <form onSubmit = {handleSubmit}>
                 <input type="text" value = {keyword} placeholder = "Enter something..." onChange = {handleInput} />
-                <button>Search</button>
+                <ButtonComponent>Search</ButtonComponent>
             </form>
             <div className = "Random-page" >
                 <a href="https://en.wikipedia.org/wiki/Special:Random" target = "_blank" rel="noopener noreferrer" >Get a Ramdom Article</a>

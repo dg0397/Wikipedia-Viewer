@@ -1,4 +1,4 @@
-import React, { Suspense } from 'react';
+import React from 'react';
 import './App.css';
 
 import Header from 'components/Header/Header';
@@ -6,15 +6,12 @@ import Footer from 'components/Footer/Footer';
 
 import Home from "pages/Home";
 import Detail from "pages/Detail"
+import Page404 from 'pages/ErrorPage';
 
-import { Route } from 'wouter';
+import { Route, Switch } from 'wouter';
 import { ArticlesContextProvider } from 'context/ContextArticles';
-import SpinnerArticles from 'components/ContentLoader/ArticleLoader';
-import Page404 from 'components/Page404/Page404';
+import SearchResults from 'pages/SearchResults';
 
-const SearchResults = React.lazy(
-  () => import("pages/SearchResults")
-)
 
 function App() {
   return (
@@ -23,15 +20,15 @@ function App() {
         <Header />
         <ArticlesContextProvider>
           <div className='Main'>
-            <Route path="/" component={Home} />
-            <Suspense fallback={<SpinnerArticles />}>
+            <Switch>
+              <Route path="/" component={Home} />
               <Route path="/search/:keyword" component={SearchResults} />
-            </Suspense>
-            <Route path="/article/:id" component={Detail} />
-            <Route
-              path = '/404'
-              component = {Page404} 
-            />
+              <Route path="/article/:id" component={Detail} />
+              <Route
+                path='/:rest*'
+                component = {Page404} 
+              />
+            </Switch>
           </div>
         </ArticlesContextProvider>
         <Footer />

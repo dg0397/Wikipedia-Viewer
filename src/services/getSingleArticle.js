@@ -8,7 +8,7 @@ export default function getSingleArticle(setState,setStatus,errorController,{id}
             const {pages} = jsonResponse.query ? jsonResponse.query : "" ;
             console.log(Object.values(pages))
             let article;
-
+            console.log("Fetching single article")
             if(Object.values(pages)[0].missing === ''){
 
                 console.log("Something was wrong");
