@@ -22,19 +22,3 @@
     line-height: 2rem;
     width: 100%;
 }
-.Article a{
-    margin-top:1rem;
-    text-align: left;
-    width: auto;
-    padding: .4rem;
-    font-size: 1rem;
-    text-decoration: none;
-    font-weight: 300;
-    text-transform: uppercase;
-    color: white;
-    background-color: hsl(197, 55%, 58%) ;
-    border-radius: 5px;
-    border:none;
-    box-shadow: 0 5px rgba(0, 0, 0, 0.2);
-    transition: all 0.25s ease-in 
-}

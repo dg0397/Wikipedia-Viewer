@@ -38,42 +38,6 @@
     font-size: 1.5rem;
     margin-left: 1rem;
 }
-#original{
-    grid-area: fullBtn;
-    padding: .4rem;
-    text-align: center;
-    font-weight: 300;
-    text-transform: uppercase;
-    text-decoration: none;
-    color: white;
-    background-color: hsl(154, 59%, 51%) ;
-    border-radius: 5px;
-    border:none;
-    box-shadow: 0 5px rgba(0, 0, 0, 0.2);
-    transition: all 0.25s ease-in ;
-}
-
-#orginal:hover {
-    background-color:hsl(154, 59%, 56%);
-}
-#original:active{
-    background-color: hsl(154, 59%, 41%);
-}
-
-#go_back{
-    grid-area: backBtn;
-    text-align: center;
-    padding: .4rem;
-    text-decoration: none;
-    font-weight: 300;
-    text-transform: uppercase;
-    color: white;
-    background-color: hsl(197, 55%, 58%) ;
-    border-radius: 5px;
-    border:none;
-    box-shadow: 0 5px rgba(0, 0, 0, 0.2);
-    transition: all 0.25s ease-in 
-}
 @media screen and (min-width : 1024px){
     .SingleDetail{
         padding: 2rem 1rem;

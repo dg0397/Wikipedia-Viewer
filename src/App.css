@@ -9,7 +9,7 @@
 }
 
 .App-content{
-  background-color: hsl(248, 32%, 49%);
+  background-color: rgb(96, 85, 165);
   min-height: 100vh;
   min-width: 350px;
   display: flex;
