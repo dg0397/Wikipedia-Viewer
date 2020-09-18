@@ -9,7 +9,7 @@
 }
 
 .App-content{
-  background-color: hsl(248, 32%, 49%);
+  background-color: rgb(96, 85, 165);
   min-height: 100vh;
   min-width: 350px;
   display: flex;
@@ -31,11 +31,10 @@
   align-items: center;
 }
 
-.Main h2{
-    align-self: flex-start;
-    text-align: left;
-    margin: 1rem 0;
-    font-weight: 300;
-    font-style: italic;
+.TextSearched{
+  align-self: flex-start;
+  text-align: left;
+  margin: 1rem 0;
+  font-weight: 300;
+  font-style: italic;
 }
-

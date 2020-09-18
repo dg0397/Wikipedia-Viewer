@@ -1,6 +1,7 @@
 import React from 'react';
 import './SingleDetail.css'
-import { Link } from 'wouter';
+import Button from 'components/Button'
+import Hyperlink from 'components/HyperlinkComponent'
 
 export default function Detail({id,article}){
     const {title,extract,thumbnailSource} = article;
@@ -14,8 +15,8 @@ export default function Detail({id,article}){
                     <img src = {thumbnailSource} alt = {title} /> 
                 </div>
             }
-            <a href={`https://en.wikipedia.org/?curid=${id}`} target = "_blank" rel="noopener noreferrer" id = 'original'>Go to Original Article</a>
-            <Link to = {`/search/${keyword}`} id = 'go_back'>Go back to the List</Link>
+            <Hyperlink href={`https://en.wikipedia.org/?curid=${id}`} type = 'fullArticleButton' >Go to Original Article</Hyperlink>
+            <Button href = {`/search/${keyword}`} type = 'backButton'>Go back to the List</Button>
         </div>
     )
 }

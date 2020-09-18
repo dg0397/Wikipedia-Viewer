@@ -1,12 +1,10 @@
 import React from 'react';
-import './Header.css'
+import {Header , Title} from './styles'
 
-const Header = () => {
+export default function HeaderComponent(){
     return (
-        <header>
-            <h1>Wikipedia Viewer</h1>
-        </header>
+        <Header>
+            <Title>Wikipedia Viewer</Title>
+        </Header>
     )
 }
-
-export default Header

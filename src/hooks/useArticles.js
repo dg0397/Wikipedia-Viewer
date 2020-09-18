@@ -6,11 +6,12 @@ const INITIAL_PAGE = 0;
 
 export default function useArticles({keyword}){
     const {articles,setArticles,setLoading,loading} = useContext(Context);
+    const [isError,setIsError] = useState(false)
 
     const keywordToUse = keyword ? keyword : localStorage.getItem("keyword");
 
     useEffect(() => {
-        getArticles(setArticles,setLoading,{keyword : keywordToUse});
+        getArticles(setArticles,setLoading,setIsError,{keyword : keywordToUse});
         localStorage.setItem('keyword',keywordToUse);
         
     }, [keywordToUse,setArticles,setLoading]);
@@ -21,8 +22,8 @@ export default function useArticles({keyword}){
     useEffect(() => {
         if(page === INITIAL_PAGE) return;
 
-        getArticles(setArticles,setLoadingNextPage,{keyword : keywordToUse, page})
+        getArticles(setArticles,setLoadingNextPage,setIsError,{keyword : keywordToUse, page})
     },[page,keywordToUse,setArticles])
     
-    return {articles,loading,loadingNextPage,setPages}
+    return {articles,loading,loadingNextPage,setPages,isError}
 }

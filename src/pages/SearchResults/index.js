@@ -7,11 +7,12 @@ import SearchBar from 'components/SearchBar/SearchBar';
 import SpinnerArticles from 'components/ContentLoader/ArticleLoader';
 import useNearScreen from 'hooks/useNearScreen';
 import { Helmet } from 'react-helmet';
+import Page404 from 'components/Page404/Page404';
 
 export default function SearchResults({ params }) {
     const { keyword } = params;
     //console.log(keyword)
-    const { articles, loading, loadingNextPage, setPages } = useArticles({ keyword });
+    const { articles, loading, loadingNextPage, setPages , isError} = useArticles({ keyword });
     //console.log(articles)
     const externalRef = useRef();
     const { isNearScreen } = useNearScreen({ externalRef: loading ? null : externalRef })
@@ -40,6 +41,9 @@ export default function SearchResults({ params }) {
             </>
         )
     }
+    if (isError) {
+        return <Page404/>
+    }
     return (
         <>
             {
@@ -60,7 +64,7 @@ export default function SearchResults({ params }) {
                             />
                         </Helmet>
                         <SearchBar />
-                        <h2>Search Results for: {decodeURI(keyword)}...</h2>
+                        <h2 className = 'TextSearched' >Search Results for: {decodeURI(keyword)}...</h2>
                         <ArticleList articles={articles} />
                         <div ref={externalRef}></div>
                         {loadingNextPage && <SpinnerArticles />}

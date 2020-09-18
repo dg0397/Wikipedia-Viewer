@@ -1,12 +1,11 @@
 import React from "react";
-import './Footer.css'
+import { Footer , FooterParagraph } from './styles';
+import Hyperlink from 'components/HyperlinkComponent'
 
-const Footer = () => {
+export default function FooterComponent(){
     return (
-        <footer>
-            <p>Coded by <a href="https://github.com/dg0397" target = "_blank" rel="noopener noreferrer">DG0397</a></p>
-        </footer>
+        <Footer>
+            <FooterParagraph>Coded by <Hyperlink href="https://github.com/dg0397" type = 'simple'>DG0397</Hyperlink></FooterParagraph>
+        </Footer>
     )
 }
-
-export default Footer;
