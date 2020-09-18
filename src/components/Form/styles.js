@@ -8,6 +8,7 @@ export const Form = styled.form`
 `
 
 export const Input = styled.input`
+    width:80%;
     height: 2rem;
     padding: .4rem;
     text-align: start;

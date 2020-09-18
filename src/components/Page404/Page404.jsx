@@ -1,6 +1,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet';
-import 'components/Page404/Page404.css';
+import { ErrorPageContainer, ErrorPageContainerIcon, ErrorPageIcon, ErrorPageNumber, ErrorPageText, ErrorPageDetail ,  ErrorPageExample} from './styles'
+import ButtonComponent from 'components/Button';
 
 export default function Page404(){
     return(
@@ -8,7 +9,22 @@ export default function Page404(){
             <Helmet>
                 <title>Page not found</title>
             </Helmet>
-            <h1>PAGE NOT FOUND! :( 404... </h1>
+            <ErrorPageContainer>
+                <ErrorPageContainerIcon>
+                    <ErrorPageIcon>
+                        <span aria-label = "Sad face icon" role = "img"  >☹️</span>
+                    </ErrorPageIcon>
+                </ErrorPageContainerIcon>
+                <ErrorPageNumber>404</ErrorPageNumber>
+                <ErrorPageText>
+                    PAGE NOT FOUND!
+                </ErrorPageText>
+                <ErrorPageDetail>
+                    Try to search with other word!
+                    <ErrorPageExample>(E.G.: JavaScript...)</ErrorPageExample>
+                </ErrorPageDetail>
+                <ButtonComponent href = '/'> Go Back to Home</ButtonComponent>
+            </ErrorPageContainer>
        </>
     )
 }
